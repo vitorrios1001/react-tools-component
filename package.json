@@ -8,6 +8,7 @@
     "dist"
   ],
   "scripts": {
+    "test": "echo test",
     "release": "standard-version",
     "build": "rollup -c",
     "publish": "np",
