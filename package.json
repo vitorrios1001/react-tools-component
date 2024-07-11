@@ -1,6 +1,6 @@
 {
   "name": "react-tools-component",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
@@ -8,8 +8,16 @@
     "dist"
   ],
   "scripts": {
+    "release": "standard-version",
     "build": "rollup -c",
-    "prepare": "npm run build"
+    "publish": "np",
+    "deploy": "npm run build && npm run release && npm publish"
+  },
+  "np": {
+    "contents": "dist",
+    "yarn": false,
+    "tests": false,
+    "cleanup": false
   },
   "type": "module",
   "keywords": [],
@@ -23,9 +31,11 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "np": "^10.0.6",
     "rollup": "^4.18.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-typescript2": "^0.36.0",
+    "standard-version": "^9.5.0",
     "typescript": "^5.5.3"
   }
 }
