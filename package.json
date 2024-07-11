@@ -7,18 +7,21 @@
   "files": [
     "dist"
   ],
+  "contributors": [
+    "Vitor Rios <vr.vitorrios@gmail.com> (https://github.com/vitorrios1001)"
+  ],
+  "homepage": "https://github.com/vitorrios1001/react-tools-component",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitorrios1001/react-tools-component.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vitorrios1001/react-tools-component/issues"
+  },
   "scripts": {
     "test": "echo test",
-    "release": "standard-version",
     "build": "rollup -c",
-    "publish": "np",
-    "deploy": "npm run build && npm run release && npm publish"
-  },
-  "np": {
-    "contents": "dist",
-    "yarn": false,
-    "tests": false,
-    "cleanup": false
+    "deploy": "npm run build && npm publish"
   },
   "type": "module",
   "keywords": [],
@@ -32,7 +35,6 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "np": "^10.0.6",
     "rollup": "^4.18.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-typescript2": "^0.36.0",
